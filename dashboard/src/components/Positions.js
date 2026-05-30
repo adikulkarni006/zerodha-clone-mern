@@ -1,5 +1,4 @@
 import React from "react";
-
 import { positions } from "../data/data";
 
 const Positions = () => {

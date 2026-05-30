@@ -24,11 +24,12 @@ function Footer() {
             </p>
 
             <div className="d-flex gap-3 mt-3 fs-4 text-muted">
-              <i className="fa fa-twitter"></i>
-              <i className="fa fa-facebook"></i>
-              <i className="fa fa-instagram"></i>
-              <i className="fa fa-linkedin"></i>
-            </div>
+  <i className="fab fa-twitter"></i>
+  <i className="fab fa-facebook"></i>
+  <i className="fab fa-instagram"></i>
+  <i className="fab fa-linkedin"></i>
+  <i className="fas fa-home"></i>
+</div>
           </div>
 
           <div className="col-md-3">

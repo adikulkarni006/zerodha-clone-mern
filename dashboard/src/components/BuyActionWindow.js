@@ -1,26 +1,40 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 import axios from "axios";
 
 import GeneralContext from "./GeneralContext";
-
 import "./BuyActionWindow.css";
+import { toast } from "react-toastify";
 
 const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
-  const handleBuyClick = () => {
-    axios.post("https://zerodha-clone-mern.onrender.com/newOrder", {
-      name: uid,
-      qty: stockQuantity,
-      price: stockPrice,
-      mode: "BUY",
-    });
+const handleBuyClick = async () => {
+  try {
+const token = localStorage.getItem("token");
 
-    GeneralContext.closeBuyWindow();
-  };
+console.log("TOKEN =>", token);
+    await axios.post(
+      "http://localhost:3002/newOrder",
+      {
+        name: uid,
+        qty: stockQuantity,
+        price: stockPrice,
+        mode: "BUY",
+      },
+      {
+        headers: {
+          authorization: token,
+        },
+      }
+    );
+
+toast.success("Order Placed Successfully!");    // GeneralContext.closeBuyWindow();
+  } catch (err) {
+    console.log(err);
+toast.error("Please Login First!");  }
+};
 
   const handleCancelClick = () => {
     GeneralContext.closeBuyWindow();

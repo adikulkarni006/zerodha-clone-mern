@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
 
 const Menu = () => {
@@ -13,6 +12,13 @@ const Menu = () => {
   const handleProfileClick = (index) => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
+
+  const handleLogout = () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("user");
+
+  window.location.href = "http://localhost:3001/login";
+};
 
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
@@ -90,10 +96,30 @@ const Menu = () => {
           </li>
         </ul>
         <hr />
-        <div className="profile" onClick={handleProfileClick}>
-          <div className="avatar">ZU</div>
-          <p className="username">USERID</p>
-        </div>
+        <div>
+  <div className="profile" onClick={handleProfileClick}>
+    <div className="avatar">ZU</div>
+    <p className="username">USERID</p>
+  </div>
+
+  {isProfileDropdownOpen && (
+    <div style={{ padding: "10px" }}>
+      <button
+        onClick={handleLogout}
+        style={{
+          border: "none",
+          background: "#f44336",
+          color: "white",
+          padding: "8px 12px",
+          borderRadius: "6px",
+          cursor: "pointer",
+        }}
+      >
+        Logout
+      </button>
+    </div>
+  )}
+</div>
       </div>
     </div>
   );

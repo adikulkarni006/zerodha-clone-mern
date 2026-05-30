@@ -1,183 +1,285 @@
-# 🚀 Zerodha Clone - MERN Stack Project
+# 🚀 Zerodha Clone – Full Stack Trading Platform
 
-A full stack Zerodha clone built using the MERN Stack.
-
-This project includes:
-- 🌐 Frontend Website
-- 📊 Trading Dashboard
-- ⚡ Backend APIs
-- 🛢 MongoDB Database Integration
+A modern full-stack trading platform inspired by Zerodha, built using the MERN Stack. The application provides secure authentication, portfolio management, order placement, real-time stock market data, and an intuitive trading dashboard.
 
 ---
 
-# 🛠 Tech Stack
+## 🌟 Features
 
-## 🎨 Frontend
-- React.js
-- Bootstrap
-- React Router DOM
+### 🔐 Authentication & Security
 
-## 📈 Dashboard
-- React.js
-- Material UI
-- Chart.js
-- Axios
+* User Registration (Signup)
+* User Login
+* JWT Authentication
+* Protected Dashboard Routes
+* Secure Password Hashing using bcryptjs
+* Persistent User Sessions
+* Logout Functionality
 
-## ⚙ Backend
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
+### 📈 Trading Dashboard
+
+* Interactive Trading Dashboard
+* Holdings Management
+* Positions Management
+* Buy Stock Orders
+* User-Specific Orders
+* Portfolio Overview
+* Responsive User Interface
+
+### 📊 Real-Time Market Data
+
+* Live Stock Price Integration
+* Finnhub Stock Market API
+* Dynamic Price Updates
+* Percentage Gain/Loss Indicators
+* Real-Time Market Insights
+
+### 🎨 Modern UI/UX
+
+* Responsive Design
+* Bootstrap 5 Integration
+* Font Awesome Icons
+* Toast Notifications (React Toastify)
+* Interactive Components
+* Professional Trading Interface
+
+### 📞 Support Portal
+
+* Support Ticket Categories
+* Search Interface
+* Featured Help Articles
+* Structured Support System
 
 ---
 
-# ✨ Features
+## 🛠️ Tech Stack
 
-- ✅ Responsive UI
-- ✅ Routing
-- ✅ Holdings Dashboard
-- ✅ Positions
-- ✅ Orders
-- ✅ Buy/Sell Window
-- ✅ REST APIs
-- ✅ MongoDB Integration
-- ✅ Interactive Charts
-- ✅ Watchlist
+### Frontend
+
+* React.js
+* React Router DOM
+* Axios
+* Bootstrap 5
+* Font Awesome
+* React Toastify
+
+### Backend
+
+* Node.js
+* Express.js
+* JWT Authentication
+* bcryptjs
+
+### Database
+
+* MongoDB Atlas
+* Mongoose ODM
+
+### APIs
+
+* Finnhub Stock Market API
+
+### Development Tools
+
+* Git
+* GitHub
+* Nodemon
+* VS Code
 
 ---
 
-# 📁 Project Structure
+## 📂 Project Structure
 
 ```bash
-Zerodha/
+Zerodha-Clone/
 │
 ├── frontend/
+│   ├── landing_page/
+│   ├── components/
+│   └── src/
+│
 ├── dashboard/
+│   ├── components/
+│   └── src/
+│
 ├── backend/
+│   ├── model/
+│   ├── schemas/
+│   ├── middleware/
+│   └── index.js
+│
+└── README.md
 ```
 
 ---
 
-# ⚡ Installation
+## 🔑 Environment Variables
 
-## 📥 Clone Repository
+Create a `.env` file inside the backend folder.
 
-```bash
-git clone <your_repo_link>
+```env
+MONGO_URL=your_mongodb_connection_string
+
+JWT_SECRET=your_jwt_secret
+
+FINNHUB_API_KEY=your_finnhub_api_key
 ```
 
 ---
 
-# 🌐 Frontend Setup
+## ⚙️ Installation
+
+### Clone Repository
 
 ```bash
-cd frontend
-npm install
-npm start
+git clone https://github.com/yourusername/zerodha-clone.git
 ```
 
-Runs on:
+### Install Dependencies
 
-```bash
-http://localhost:3000
-```
-
----
-
-# 📊 Dashboard Setup
-
-```bash
-cd dashboard
-npm install
-npm start
-```
-
-Runs on:
-
-```bash
-http://localhost:3001
-```
-
----
-
-# ⚙ Backend Setup
+Backend
 
 ```bash
 cd backend
 npm install
+```
+
+Frontend
+
+```bash
+cd frontend
+npm install
+```
+
+Dashboard
+
+```bash
+cd dashboard
+npm install
+```
+
+---
+
+## ▶️ Run Application
+
+Backend
+
+```bash
+cd backend
 npm start
 ```
 
-Runs on:
+Frontend
 
 ```bash
-http://localhost:3002
+cd frontend
+npm start
+```
+
+Dashboard
+
+```bash
+cd dashboard
+npm start
 ```
 
 ---
 
-# 🔐 Environment Variables
+## 🌐 Application Ports
 
-Create a `.env` file inside the backend folder:
+```bash
+Frontend  : http://localhost:3001
 
-```env
-PORT=3002
-MONGO_URL=your_mongodb_connection_string
+Dashboard : http://localhost:3000
+
+Backend   : http://localhost:3002
 ```
 
 ---
 
-# 🔗 API Routes
+## 📡 API Endpoints
 
-## 📈 Holdings
+### Authentication
 
-```bash
+```http
+POST /signup
+POST /login
+```
+
+### Trading
+
+```http
+POST /newOrder
+GET /myOrders
+```
+
+### Portfolio
+
+```http
 GET /allHoldings
-```
-
-## 📊 Positions
-
-```bash
 GET /allPositions
 ```
 
-## 🛒 Orders
+### Market Data
 
-```bash
-POST /newOrder
+```http
+GET /stock/:symbol
+```
+
+Example:
+
+```http
+GET /stock/AAPL
 ```
 
 ---
 
-# 🖥 Screens
+## 🔒 Security Features
 
-- 🏠 Home Page
-- 📊 Dashboard
-- 💼 Holdings
-- 📌 Positions
-- 🧾 Orders
-- 💰 Funds
-- 👀 Watchlist
-
----
-
-# 🚀 Future Improvements
-
-- 🔐 Authentication
-- 📡 Real-time Stock API
-- 👤 User Accounts
-- 📉 Portfolio Analytics
-- 🌙 Dark Mode
-- ☁ Deployment
+* JWT Token Authentication
+* Password Hashing with bcryptjs
+* Protected API Routes
+* User-Specific Data Access
+* Environment Variable Protection
+* Git Ignore Configuration
 
 ---
 
-# 👨‍💻 Author
+## 🚀 Future Enhancements
 
-Adi
+* Sell Orders
+* Real-Time Portfolio Updates
+* Advanced Charts
+* Watchlist Feature
+* Transaction History
+* Razorpay Integration
+* Email Verification
+* Two-Factor Authentication
+* Live WebSocket Market Feed
+* Admin Dashboard
 
 ---
 
-# 📜 License
+## 📸 Screenshots
 
-This project is for learning and educational purposes.
+Coming Soon...
+
+---
+
+## 👨‍💻 Author
+
+**Adi Kulkarni**
+
+Full Stack MERN Developer
+
+GitHub: https://github.com/adikulkarni006
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
+
+---
+
+### Built with ❤️ using MERN Stack
