@@ -15,8 +15,11 @@ function Hero() {
         <Link to="/signup">
         <button
           className="p-2 btn btn-primary fs-5 mb-5"
-          style={{ width: "20%", margin: "0 auto" }}
-        >
+style={{
+  maxWidth: "250px",
+  width: "100%",
+  margin: "0 auto",
+}}        >
           Signup Now
         </button>
       </Link>

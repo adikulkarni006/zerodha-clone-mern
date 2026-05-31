@@ -26,9 +26,19 @@ code {
 }
 
 #supportWrapper{
-  display: flex;
-  justify-content: space-between;
-  margin: 0 150px;
+  display:flex;
+  justify-content:space-between;
+  margin:0 40px;
+}
+
+@media (max-width:768px){
+
+  #supportWrapper{
+    flex-direction:column;
+    gap:15px;
+    margin:0;
+  }
+
 }
 
 #supportHero input{
@@ -46,4 +56,37 @@ code {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+}
+
+@media (max-width:768px){
+
+  .nav-link{
+    margin-left:0;
+  }
+
+  #supportWrapper{
+    flex-direction:column;
+    margin:0;
+  }
+
+  .dashboard-container{
+    flex-direction:column;
+  }
+
+  .topbar-container{
+    flex-direction:column;
+    height:auto;
+  }
+
+  .indices-container{
+    width:100%;
+    border-right:none;
+  }
+
+  .watchlist-container,
+  .content{
+    width:100%;
+    flex-basis:100%;
+  }
+
 }

@@ -23,7 +23,8 @@ function Footer() {
               All rights reserved.
             </p>
 
-            <div className="d-flex gap-3 mt-3 fs-4 text-muted">
+{/* <div className="d-flex gap-3 mt-3 fs-4 text-muted"> */}
+<div className="d-flex flex-wrap gap-3 mt-3 fs-4 text-muted">
   <i className="fab fa-twitter"></i>
   <i className="fab fa-facebook"></i>
   <i className="fab fa-instagram"></i>

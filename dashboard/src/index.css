@@ -20,6 +20,27 @@ code {
   box-sizing: border-box;
 }
 
+@media (max-width:768px){
+
+  .dashboard-container{
+    flex-direction:column;
+    height:auto;
+  }
+
+  .watchlist-container{
+    width:100%;
+    flex-basis:100%;
+    height:auto;
+  }
+
+  .content{
+    width:100%;
+    flex-basis:100%;
+    padding:20px;
+  }
+
+}
+
 .content {
   flex-basis: 68%;
   height: 100%;
@@ -278,6 +299,19 @@ code {
   display: inline-block;
   margin-right: 30px;
   text-decoration: none;
+}
+
+@media (max-width:768px){
+
+  .menus ul{
+    padding: 40px;
+  }
+
+  .menus li{
+    display:block;
+    margin:10px 0;
+  }
+
 }
 
 .menu {
@@ -576,6 +610,20 @@ hr {
   z-index: 9;
 }
 
+@media (max-width:768px){
+
+  .topbar-container{
+    flex-direction:column;
+    height:auto;
+  }
+
+  .indices-container{
+    width:100%;
+    flex-basis:100%;
+    border-right:none;
+  }
+
+}
 .indices-container {
   flex-basis: 32%;
   height: 100%;
